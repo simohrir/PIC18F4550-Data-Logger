@@ -24,15 +24,15 @@ This project is a temperature data logger using:
 - ## HOW IT WORK
 - EEPROM(24LC256) & DS3232(RTC) use I2C for comunication
 - MCU uses I²C to:
-  ###for DS3232:
-      Write time/date to DS3232 registers
-      Read current time/date from registers
-      Time is stored in BCD format
-  ###for EEPROM:
-  Select memory address
-  Write data (byte/page)
-  Read stored data later
--The DS3232 is used to keep accurate time and generate a periodic alarm every min
+ -for DS3232:
+      Write time/date to DS3232 registers.
+      Read current time/date from registers.
+      Time is stored in BCD format.
+  -for EEPROM:
+  Select memory address.
+  Write data (byte/page).
+  Read stored data later.
+-The DS3232 is used to keep accurate time and generate a periodic alarm every min.
 This alarm triggers an interrupt(IOC) on the microcontroller
 -When the interrupt occurs, the microcontroller:
 Reads the current temperature value.

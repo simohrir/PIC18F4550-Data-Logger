@@ -40,6 +40,10 @@ This project is a temperature data logger using:
   - Reads the current temperature value
   - Retrieves the timestamp from the DS3232
   - Stores the temperature and time data into the EEPROM
+    
+- A user-triggered interrupt is implemented to retrieve logged data  
+  Upon interrupt activation, the microcontroller accesses the EEPROM, extracts the temperature records stored over the last 60 minutes, and sends the data through UART for external display or logging
+
 
 
 

@@ -22,8 +22,8 @@ This project is a temperature data logger using:
 - XC8 Compiler
 - Proteus for simulation
 - ## HOW IT WORK
-- EEPROM(24LC256) & DS3232(RTC) use I2C for comunication
-- MCU uses I²C to:
+ 
+- MCU uses I²C (100 kHz) to communicate with EEPROM (24LC256) & DS3232  (RTC):
   - For DS3232:
     - Write time/date to DS3232 registers
     - Read current time/date from registers
@@ -38,11 +38,11 @@ This project is a temperature data logger using:
 
 - When the interrupt occurs, the microcontroller:
   - Reads the current temperature value
-  - Retrieves the timestamp from the DS3232
-  - Stores the temperature and time data into the EEPROM
+  - Send info via UART (time/date/temp) with a baud rate of [9600bps].
+  - Stores the temperature and time into the EEPROM
     
 - A user-triggered interrupt is implemented to retrieve logged data  
-  Upon interrupt activation, the microcontroller accesses the EEPROM, extracts the temperature records stored over the last 60 minutes, and sends the data through UART for external display or logging
+  Upon interrupt activation, the microcontroller accesses the EEPROM, extracts the temperature records stored over the last 60 minutes, and sends the data through UART [9600bps] for external display or logging
 
 
 

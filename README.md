@@ -1,3 +1,8 @@
+<img width="2048" height="1434" alt="LCD" src="https://github.com/user-attachments/assets/2de4f242-0b4b-447f-a1e4-a0d65ebdd63a" />
+
+
+
+
 # PIC18F4550-Data-Logger
 Temperature data logger using PIC18F4550, RTC and EEPROM
 # PIC18F4550 Temperature Data Logger
